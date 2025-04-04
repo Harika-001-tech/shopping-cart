@@ -89,6 +89,13 @@ export default function ShoppingCart() {
         )}
       </div>
 
+       {cart.length === 0 && (
+        <div className="bg-white p-4 rounded-lg shadow-md mt-4 text-center">
+          <p className="text-gray-500 font-medium">Your cart is empty</p>
+          <p className="text-gray-400 text-sm">Add some products to see them here!</p>
+        </div>
+      )}
+
       {cart.length > 0 && (
         <div>
           <h3 className="text-xl font-semibold mt-6">Cart Items</h3>
